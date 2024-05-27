@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1682330787 source:c:\users\dudul\desktop\desenrola-logica\main.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	<locale.h>
+	<math.h>
+	<ctype.h>
+	"logica.h"
+
+1682330787 c:\users\dudul\desktop\desenrola-logica\logica.h
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	<locale.h>
+	<math.h>
+	<ctype.h>
+

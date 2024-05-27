@@ -1,0 +1,23 @@
+int alturaArvore(tipoNoh *raiz){
+
+	int alturaDireita=0;
+	int alturaEsquerda=0;
+
+	if (raiz == NULL)
+	{	
+		return -1;
+	}
+
+	alturaEsquerda = alturaArvore(raiz->esquerda);
+	alturaDireita = alturaArvore(raiz->direita);
+
+	if (alturaEsquerda > alturaDireita)
+	{
+		return alturaEsquerda+1;
+	}
+	else
+	{
+		return alturaDireita+1;
+	}
+
+}

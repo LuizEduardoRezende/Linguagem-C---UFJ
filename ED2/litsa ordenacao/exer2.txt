@@ -1,0 +1,3 @@
+Um exemplo prático que envolve o problema de ordenação é a classificação de produtos em uma loja online de acordo com o preço. 
+Imagine que um usuário deseja achar o produto com o menor preço possível dentro de um site. 
+Para isso é necessário ordenar os produtos do mais barato para o mais caro.

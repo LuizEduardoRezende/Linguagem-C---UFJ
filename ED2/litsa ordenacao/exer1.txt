@@ -1,0 +1,2 @@
+O problema de ordenação consiste em organizar uma determinada estrutura de dados de maneira ascendente ou descendente. 
+Para abordar esse desafio, existem inúmeras soluções e algoritmos capazes de ordenar grandes conjuntos de números.

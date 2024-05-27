@@ -1,0 +1,72 @@
+Alunos: Luiz Eduardo Rezende e Calebe Miranda
+
+QUESTÃO QUICKSORT:
+Você foi designado para implementar a função quicksort_dec que realiza a ordenação decrescente de um array de inteiros 
+utilizando o algoritmo quicksort_dec. Isso implica modificar também a função particionar.
+
+QUESTÃO MERGESORT:
+Ordenação de Livros por Autor - Suponha que você é responsável por organizar uma biblioteca virtual que armazena informações sobre diversos livros. 
+Cada livro é representado por uma estrutura de dados simples que contém o título, o autor e o ano de publicação.
+A sua tarefa é implementar a função mergeSortLivros que recebe como parâmetro um array de livros e o número total de livros, e ordena-os em ordem alfabética crescente de acordo com o nome do autor. 
+Você deve usar o algoritmo Merge Sort para realizar essa ordenação.
+
+QUESTÃO BUCKETSORT:
+
+1. Nível de Complexidade:
+
+a) Explique sucintamente qual é o principal benefício do algoritmo Bucket Sort em termos de complexidade em relação a outros algoritmos de ordenação.
+
+b) Qual é o pior caso de complexidade temporal (Big O) do algoritmo Bucket Sort? Justifique sua resposta.
+
+2. Funcionamento do Código:
+
+Considere o seguinte trecho de código em C para o algoritmo Bucket Sort:
+
+void bucketSort(int *vetor, int tamanho) {
+    const int maximo = pegarMaximo(vetor, tamanho);
+    int balde[maximo + 1];
+
+    for (int i = 0; i <= maximo; i++) {
+        balde[i] = 0;
+    }
+
+    for (int i = 0; i < tamanho; i++) {
+        balde[vetor[i]]++;
+    }
+
+    for (int i = 0, j = 0; i <= maximo; i++) {
+        while (balde[i] > 0) {
+            vetor[j++] = i;
+            balde[i]--;
+        }
+    }
+}
+
+a) Explique o propósito da primeira parte do código que inicializa o array balde com zeros.
+
+b) Qual é o papel do segundo loop (for) no código e como ele contribui para a ordenação dos elementos?
+
+c) Explique o funcionamento do último loop (for aninhado com while) e como ele garante que os elementos são ordenados corretamente.
+
+QUESTÃO BUBBLESORT
+Greg tem duas namoradas, Luana e Gabriela. As duas gostam muito de maquiagem e desejam receber um conjunto de maquiagens no próximo dia dos namorados.
+Porém, greg só possui dinheiro para comprar um kit de maquiagem. A loja de maquiagem vende seus produtos segundo um código, cada produto possui um número equivalente respectivo. 
+Sabendo que Luana quer um kit de maquiagem composto pelos códigos: 22, 45, 66, 27, 77, 69 e que Gabriela quer um composto pelos códigos: 74, 13, 25, 48, 11, 2.
+Desenvolva um código em C, usando o bubble sort, que demonstre para Greg qual o melhor kit de maquiagem comprar, para que suas namoradas não descubram sobre a infidelidade de Greg.
+Sabe-se que o melhor kit seria a média entre os valores de cada um dos kits desejados após sua ordenação. Exêmplo: A média da primeira escolha de Luana com a primeria escolha de Gabriela seria a primeira escolha perfeita que agradaria ambas as namoradas.
+
+QUESTÃO INSERTION_SORT
+Faça um código em C utilizando o algoritmo Insertion Sort, que solucione o seguinte problema:
+Ordene um vetor de 20 posições composta por inserções aleatórias (usando a função rand()) que ao ser ordenado, a soma de cada dupla de valores do vetor siga a razão da proporção áurea. 
+Printe todos os valores, printe a razão de cada dupla calculada e printe caso dê algum erro.
+
+QUESTÃO SELECTION_SORT
+Em uma corrida de tartarugas as cinco finalistas ficaram muito próximas no placar de tempo. 
+Sabendo que o placar de tempo foi:
+50 minutos e 32 segundos
+50 minutos e 21 segundos
+51 minutos e 2 segundos
+49 minutos e 69 segundos
+51 minutos e 30 segundos.
+Utilize o algoritmo Selection Sort para analisar e ordenar as finalistas: Gertrudes, Jurema, Jandira, Docinho e Abóbora. 
+Sabendo que Gertrudes fez mais que Jurema, Jandira foi a mais lenta e jurema foi mais rápida que abóbora

@@ -1,0 +1,6 @@
+Nome: Walisson
+Idade: 20
+CPF: 01374387100
+Nota no tema 1: 0
+Nota no tema 2: 0
+Nota no tema 3: 30
