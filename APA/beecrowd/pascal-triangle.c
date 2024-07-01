@@ -1,21 +1,22 @@
 #include <stdio.h>
-#include <math.h>
 
 int main() {
     int t; //quantidade t de entradas
     scanf("%d", &t); 
 
-    int N[10];
+    int N[100];
     //scanear as t entradas
     for(int i = 0; i < t; i++){
         scanf("%d", &N[i]);
     }
 
-    long int sum_N;
-    //printar saida para as t entradas
+    int soma;
     for(int i = 0; i < t; i++){
-        sum_N = (1ULL << N[i]) - 1; // 2^n - 1
-        printf("%ld\n", sum_N);
+        soma = 0;
+        for(int j = 0; j < N[i]; j++){
+            soma += (1 << j); 
+        }
+        printf("%d\n", soma);
     }
 
     return 0;
