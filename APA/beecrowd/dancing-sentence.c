@@ -1,39 +1,37 @@
 #include <stdio.h>
 #include <string.h>
-#define T 3
 
-int main() {
-    char frase[T][51];
-    int tamanho[T];
-
-    for (int i = 0; i < T; i++) {
-        fgets(frase[i], sizeof(frase[i]), stdin);
-        frase[i][strcspn(frase[i], "\n")] = '\0';
-        tamanho[i] = strlen(frase[i]);
-    }
+int main()
+{
+    char ch[100];
 
     int pos = 0; // primeira pos = 0
     // posicao par -> upper
     // posicao impar -> lower
 
-    for (int i = 0; i < T; i++) {
+    while (gets(ch) != NULL)
+    {
         pos = 0;
-        for (int j = 0; j < tamanho[i]; j++) {
-            if (frase[i][j] != ' ') { // Ignorar espaços
-
-                if ((pos % 2) == 0) { // posicao par
-                    if (frase[i][j] >= 'a' && frase[i][j] <= 'z') // Letra em minúscula
-                        frase[i][j] -= 32; // Converter para maiúscula
-                } 
-                else { // posicao impar
-                    if (frase[i][j] >= 'A' && frase[i][j] <= 'Z') // Letra em maiúscula
-                        frase[i][j] += 32; // Converter para minúscula
+        int tamanho = strlen(ch);
+        for (int i = 0; i < tamanho; i++)
+        {
+            if (ch[i] != ' ')                               // Ignorar espaços
+            { 
+                if ((pos % 2) == 0)                         // posicao par
+                {                                                 
+                    if (ch[i] >= 'a' && ch[i] <= 'z')       // Letra em minúscula
+                        ch[i] -= 32;                        // Converter para maiúscula
+                }
+                else                                        // posicao impar
+                {                                                 
+                    if (ch[i] >= 'A' && ch[i] <= 'Z')       // Letra em maiúscula
+                        ch[i] += 32;                        // Converter para minúscula
                 }
                 pos++;
-
             }
         }
-        printf("%s\n", frase[i]);
+        ch[tamanho] = '\0';
+        printf("%s\n", ch);
     }
 
     return 0;
